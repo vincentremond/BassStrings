@@ -22,7 +22,7 @@ function component() {
         'fr': [['la'], ['la&sharp;', 'si&flat;'], ['si'], ['do'], ['do&sharp;', 'ré&flat;'], ['ré'], ['ré&sharp;', 'mi&flat;'], ['mi'], ['fa'], ['fa&sharp;', 'sol&flat;'], ['sol'], ['sol&sharp;', 'la&flat;']],
     };
 
-    let getFirst = function (obj) {
+    const getFirst = function (obj) {
         let key = _.first(_.keys(obj));
         return obj[key];
     }
@@ -34,7 +34,7 @@ function component() {
     const stringInterval = 5;
     const lang = 'en';
 
-    let convertNote = function (noteIndex) {
+    const convertNote = function (noteIndex) {
         let octave = Math.trunc(noteIndex / notesCount);
         let note = noteIndex % notesCount;
         let labels = notesLabels[lang][note];
